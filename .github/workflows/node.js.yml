@@ -24,8 +24,9 @@ jobs:
       with:
         node-version: 18.15.0
         cache: 'npm'
-    - run: npm install
+    - run: npm i
     - run: npm run build
-    - run: pm2 restart all
-    - run: sudo systemctl restart nginx
+    - run: npm install -g serve
+    - run: serve -s build
+    - run: npm start
 
