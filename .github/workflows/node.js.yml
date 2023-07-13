@@ -14,17 +14,17 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.15.0]
+        node-version: [18.16.1]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js 18.15.0
+    - name: Use Node.js 18.16.1
       uses: actions/setup-node@v3
       with:
-        node-version: 18.15.0
+        node-version: 18.16.1
         cache: 'npm'
-    - run: npm install
+    - run: npm i
     - run: npm run build
-    - run: sudo systemctl restart nginx
+    - run: npm start
 
