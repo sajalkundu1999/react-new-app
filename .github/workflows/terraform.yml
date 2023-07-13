@@ -81,6 +81,7 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
+      runs-on: self-hosted
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan

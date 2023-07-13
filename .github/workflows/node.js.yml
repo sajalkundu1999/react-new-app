@@ -24,6 +24,7 @@ jobs:
       with:
         node-version: 18.15.0
         cache: 'npm'
+    -runs-on: self-hosted    
     - run: npm install
     - run: npm start
     - run: pm2 restart all
