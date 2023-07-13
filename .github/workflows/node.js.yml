@@ -7,8 +7,7 @@ on:
 jobs:
   build:
 
-    # runs-on: [self-hosted, react-new-app]
-    runs-on: self-hosted
+    runs-on: [self-hosted, react-new-app]
 
     strategy:
       matrix:
@@ -26,3 +25,4 @@ jobs:
     - run: npm run build
     - run: npm start
     - run: sudo systemctl restart nginx
+    runs-on: self-hosted
