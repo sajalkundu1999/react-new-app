@@ -28,6 +28,3 @@ jobs:
     - run: npm start
     - run: pm2 restart all
     - run: sudo systemctl restart nginx
-    -runs-on: self-hosted 
-
-
